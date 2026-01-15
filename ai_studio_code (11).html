@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Publisher - Home & Privacy</title>
+    <style>
+        :root {
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0; 
+            padding: 0;
+            background-color: var(--bg-color); 
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 20px;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .nav-container {
+            max-width: 800px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-weight: 700; font-size: 20px; color: white; text-decoration: none; }
+        .nav-links a {
+            color: var(--text-muted); text-decoration: none; margin-left: 20px; font-size: 14px; transition: 0.2s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Main Container */
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 { font-size: 42px; margin-bottom: 10px; background: linear-gradient(to right, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { color: var(--text-muted); font-size: 18px; max-width: 500px; margin: 0 auto 30px auto; }
+        
+        .btn-cta {
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
+            transition: transform 0.2s, background 0.2s;
+            box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+        }
+        .btn-cta:hover { transform: translateY(-2px); background-color: var(--accent-hover); }
+
+        /* Sections */
+        section { margin: 60px 0; }
+        h2 { border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 20px; color: white; }
+        
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        /* Lists */
+        ul, ol { margin-left: 20px; color: var(--text-muted); }
+        li { margin-bottom: 10px; }
+
+        /* Developer Card */
+        .dev-profile {
+            display: flex; align-items: center; gap: 20px;
+        }
+        .dev-avatar {
+            width: 60px; height: 60px; background: var(--border); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 24px;
+        }
+        .dev-info h3 { margin: 0; font-size: 18px; color: white; }
+        .dev-info a { color: var(--accent); text-decoration: none; font-size: 14px; }
+        .dev-info a:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer {
+            text-align: center; padding: 40px; color: var(--text-muted); font-size: 13px;
+            border-top: 1px solid var(--border); margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="#" class="logo">Instant Publisher</a>
+        <div class="nav-links">
+            <a href="#how-to">How to Use</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Host Your HTML in Seconds</h1>
+        <p>A private, secure, and instant way to publish your static websites directly from your browser.</p>
+        <!-- LINKS TO YOUR TOOL -->
+        <a href="host.html" class="btn-cta">🚀 Open Web Publisher Tool</a>
+    </div>
+
+    <!-- How to Use -->
+    <section id="how-to">
+        <h2>How to Use</h2>
+        <div class="card">
+            <ol>
+                <li>Prepare your website file (must be <strong>.html</strong> or <strong>.htm</strong>).</li>
+                <li>Click the <strong>Open Web Publisher Tool</strong> button above.</li>
+                <li>Click the upload area and select your file.</li>
+                <li>Wait for the progress bar to complete.</li>
+                <li>Once finished, copy your unique public link or open it directly.</li>
+            </ol>
+            <p style="color:var(--text-muted); font-size:14px; margin-top:15px;">
+                <em>Note: Your file history is saved automatically to your device for easy access later.</em>
+            </p>
+        </div>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section id="privacy">
+        <h2>Privacy Policy</h2>
+        <div class="card">
+            <p><strong>1. Local Storage Data</strong><br>
+            To ensure your privacy, the list of your uploaded websites ("History") is stored strictly in your browser's <code>Local Storage</code>. This means user A cannot see the files uploaded by user B. Your dashboard is private to your specific device.</p>
+            
+            <p><strong>2. Hosting Mechanism</strong><br>
+            Files are securely uploaded to our repository. While the generated link is public (so you can share it), the management of these files is restricted to the administrator and your local device history.</p>
+            
+            <p><strong>3. Data Collection</strong><br>
+            We do not collect personal data, cookies, or track your browsing behavior. This tool is a direct utility for developers.</p>
+        </div>
+    </section>
+
+    <!-- Developer & Contact -->
+    <section id="contact">
+        <h2>Developer & Support</h2>
+        <div class="card">
+            <p style="margin-top:0;">For adoption inquiries, bug reports, or support, please contact the developer.</p>
+            
+            <div class="dev-profile">
+                <div class="dev-avatar">👨‍💻</div>
+                <div class="dev-info">
+                    <h3>Ritam</h3>
+                    <div>GitHub: <a href="https://github.com/ritampaine75-debug" target="_blank">github.com/ritampaine75-debug</a></div>
+                    <div>Email: <a href="mailto:ritampaine75@gmail.com">ritampaine75@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2024 Instant Publisher. Designed by Ritam.
+</footer>
+
+</body>
+</html>
